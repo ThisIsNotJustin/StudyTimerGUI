@@ -66,11 +66,12 @@ public class StudyTimer extends JFrame {
             // if start button is pressed and studytime is less than or equal
             // to 0 reset studyOver back to false, text color to black, 
             // studytime back to 5400 seconds, display the studytime and start
-            // the timer
+            // the timer, also make sure breakLength is back to 10
             if (studytime <= 0) {
                 studyOver = false;
                 timerLabel.setForeground(BLACK);
                 studytime = 5400;
+                breakLength = 10;
                 timerLabel.setText(formatTime(studytime));
                 timer.start();
             }
@@ -114,9 +115,10 @@ public class StudyTimer extends JFrame {
                 timerLabel.setForeground(RED);
                 timerLabel.setText(String.format("Study Time Over"));
                 // if studytime is perfectly divisble by 5 minutes and greater
-                // than zero, set breakTime to true
+                // than zero, set breakTime to true, and breakLength back to 10
             } else if (studytime % 300 == 0 && studytime > 0) { 
                 breakTime = true;
+                breakLength = 10;
             }
             // if breakTime is true and studyOver is false, set text to green
             // and display Break: with a countdown of the length of the break
