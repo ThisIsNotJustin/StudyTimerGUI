@@ -45,7 +45,8 @@ Note: If you click the Start button again after the timer has ended, the study t
 
 
 
--------Code Description-------
+Code Description
+------------------------------
 
 The StudyTimer class extends the JFrame class, which allows the program to create a window with the timer and start and stop buttons. 
 
